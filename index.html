@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf‐8" />
+    <title>synthesizer</title>
+  </head>
+  <body>
+    <button id="play">play / pause</button>
+    <div>
+      <input type="range" id="volume" min="0" max="0.25" step="0.05" />
+      <label for="volume">volume</label>
+    </div>
+    <div>
+      <input type="range" id="bpm" min="60" max="180" step="1" />
+      <label for="bpm">BPM: <span id="bpmValue"></span></label>
+    </div>
+    <div id="viewport">
+      <canvas id="base" class="canvas-layer" style="z-index: 0"></canvas>
+      <canvas id="note" class="canvas-layer" style="z-index: 1"></canvas>
+      <canvas
+        id="beat"
+        class="canvas-layer"
+        style="z-index: 2; pointer-events: none"
+      ></canvas>
+    </div>
+  </body>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
+</html>
